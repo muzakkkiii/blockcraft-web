@@ -100,7 +100,7 @@ function paintAll() {
   });
   solid(T.STONE, '#8a8a8a', '#6c6c6c');
   solid(T.SAND, '#ddcb8f', '#c2ad6d');
-  solid(T.SANDSTONE, '#d8c48b', '#bda householder'.slice(0, 7), (ox, oy) => {
+  solid(T.SANDSTONE, '#d8c48b', '#bda76a', (ox, oy) => {
     g.strokeStyle = 'rgba(150,130,90,.7)'; g.lineWidth = 1;
     for (let y = 8; y < TILE_PX; y += 8) { g.beginPath(); g.moveTo(ox, oy + y); g.lineTo(ox + TILE_PX, oy + y); g.stroke(); }
   });
