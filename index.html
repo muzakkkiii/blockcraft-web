@@ -2,7 +2,12 @@
 <html lang="id">
 <head>
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+<meta name="theme-color" content="#0b1020" />
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="description" content="Blockcraft — Minecraft clone berbasis web dengan dunia tak terbatas, crafting, mob, siang-malam, dan kontrol sentuh untuk HP & tablet." />
 <title>Blockcraft — Minecraft Clone Web</title>
 <link rel="stylesheet" href="./style.css" />
 <script type="importmap">
@@ -14,37 +19,51 @@
 </script>
 </head>
 <body>
-  <div id="crosshair"></div>
+  <!-- Semua HUD, hotbar, inventori, furnace, dan kontrol sentuh dibuat oleh src/ui.js -->
 
-  <div id="hud">
-    <div><span class="k">FPS</span> <span id="fps">--</span></div>
-    <div><span class="k">XYZ</span> <span id="coords">0 / 0 / 0</span></div>
-    <div><span class="k">Mode</span> <span id="mode">Survival</span></div>
+  <div id="loading">
+    <div class="logo-mini">BLOCKCRAFT</div>
+    <div class="spinner"></div>
+    <div>Membangun dunia…</div>
   </div>
-
-  <div id="hotbar"></div>
 
   <div id="overlay">
-    <div class="panel">
+    <div class="start-panel">
       <h1>BLOCKCRAFT</h1>
-      <p class="sub">Minecraft clone berbasis web — voxel engine dengan Three.js</p>
-      <button id="play">Klik untuk Main</button>
-      <div class="keys">
-        <div><b>W A S D</b><span>Jalan</span></div>
-        <div><b>Spasi</b><span>Lompat / naik</span></div>
-        <div><b>Shift</b><span>Lari / turun</span></div>
-        <div><b>Klik Kiri</b><span>Hancurkan blok</span></div>
-        <div><b>Klik Kanan</b><span>Pasang blok</span></div>
-        <div><b>1 - 8</b><span>Pilih blok</span></div>
-        <div><b>Scroll</b><span>Ganti blok</span></div>
-        <div><b>F</b><span>Mode terbang</span></div>
-        <div><b>R</b><span>Reset dunia</span></div>
-        <div><b>Esc</b><span>Lepas kontrol</span></div>
+      <p class="sub">Voxel sandbox — dunia tak terbatas, crafting, mob, siklus siang &amp; malam</p>
+
+      <button id="play">MAIN SEKARANG</button>
+
+      <div class="controls">
+        <div class="ctrl-col">
+          <h3>Komputer</h3>
+          <div><b>W A S D</b><span>Jalan</span></div>
+          <div><b>Spasi</b><span>Lompat / naik</span></div>
+          <div><b>Shift</b><span>Lari / turun</span></div>
+          <div><b>Ctrl</b><span>Mengendap</span></div>
+          <div><b>Klik Kiri</b><span>Tambang / serang</span></div>
+          <div><b>Klik Kanan</b><span>Pasang / makan / buka</span></div>
+          <div><b>E</b><span>Inventori &amp; crafting</span></div>
+          <div><b>1 – 9</b><span>Pilih slot</span></div>
+          <div><b>F</b><span>Mode terbang</span></div>
+          <div><b>M</b><span>Bisukan suara</span></div>
+        </div>
+        <div class="ctrl-col">
+          <h3>HP &amp; Tablet</h3>
+          <div><b>Joystick</b><span>Jalan (dorong penuh = lari)</span></div>
+          <div><b>Geser layar</b><span>Melihat sekeliling</span></div>
+          <div><b>Ketuk layar</b><span>Pasang / serang / buka</span></div>
+          <div><b>Tahan ⛏</b><span>Menambang</span></div>
+          <div><b>Tombol ⬆</b><span>Lompat</span></div>
+          <div><b>Tombol ⬇</b><span>Mengendap</span></div>
+          <div><b>Ikon tas</b><span>Inventori &amp; crafting</span></div>
+          <div><b>Ikon ⚙</b><span>Pengaturan &amp; jarak render</span></div>
+        </div>
       </div>
+
+      <p class="tip">Tips: buat <b>meja kerja</b> dari 4 papan, lalu <b>tungku</b> dari 8 cobblestone untuk melebur bijih.</p>
     </div>
   </div>
-
-  <div id="loading">Membangun dunia…</div>
 
   <script type="module" src="./src/main.js"></script>
 </body>
