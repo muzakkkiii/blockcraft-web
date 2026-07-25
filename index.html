@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Blockcraft — Minecraft Clone Web</title>
+<link rel="stylesheet" href="./style.css" />
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://unpkg.com/three@0.160.0/build/three.module.js"
+  }
+}
+</script>
+</head>
+<body>
+  <div id="crosshair"></div>
+
+  <div id="hud">
+    <div><span class="k">FPS</span> <span id="fps">--</span></div>
+    <div><span class="k">XYZ</span> <span id="coords">0 / 0 / 0</span></div>
+    <div><span class="k">Mode</span> <span id="mode">Survival</span></div>
+  </div>
+
+  <div id="hotbar"></div>
+
+  <div id="overlay">
+    <div class="panel">
+      <h1>BLOCKCRAFT</h1>
+      <p class="sub">Minecraft clone berbasis web — voxel engine dengan Three.js</p>
+      <button id="play">Klik untuk Main</button>
+      <div class="keys">
+        <div><b>W A S D</b><span>Jalan</span></div>
+        <div><b>Spasi</b><span>Lompat / naik</span></div>
+        <div><b>Shift</b><span>Lari / turun</span></div>
+        <div><b>Klik Kiri</b><span>Hancurkan blok</span></div>
+        <div><b>Klik Kanan</b><span>Pasang blok</span></div>
+        <div><b>1 - 8</b><span>Pilih blok</span></div>
+        <div><b>Scroll</b><span>Ganti blok</span></div>
+        <div><b>F</b><span>Mode terbang</span></div>
+        <div><b>R</b><span>Reset dunia</span></div>
+        <div><b>Esc</b><span>Lepas kontrol</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="loading">Membangun dunia…</div>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
